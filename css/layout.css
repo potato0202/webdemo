@@ -87,182 +87,444 @@ input[type="button"], input[type="submit"], button {
 
 
 body {
-  font-family:  Arial, "微軟正黑體", sans-serif;
+  font-family:  Arial, "Noto Sans TC", "微軟正黑體", sans-serif;
   font-size: 16px;
-  color: #3F5D45;
+  color: #000;
 }
 
 .wrapper{
-  width: 1024px; 
-  margin: 0 auto; 
-  padding-left: 42px; 
-  padding-right: 42px;
+  width: 1088px; 
+  margin: 0 auto;
 }
 
-.header{
+.header{  
+  position: absolute;
+  width: 100%;
+  padding: 24px 0;
+}
+.header .wrapper{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
-  margin-top: 30px;
 }
-.logo:hover{opacity: 0.8;}
-.logo img{ max-width: auto; height: 42px;}
-.menu{
+.logo{width: 218px; display: inline-block;}
+.logo img{width: 100%; height: auto; vertical-align: top;}
+
+.btn{
+  padding: 8px 32px;
+  background: #FF5D50;
+  border-radius: 22px;
+  color: #fff;
+  display: inline-block;
+}
+
+.btn-secondary{
+  padding: 12px 32px;
+  background: #56C4C5;  
+  border: 1px solid #56C4C5;
+}
+.btn-secondary:hover{
+  background: #fff;  
+  color: #56C4C5;
+}
+.top-area{
+  padding-top: 118px;
+  height: 100vh;
+  background: url(../images/bg_home.svg) no-repeat right top;
+  background-size: 50%;
+}
+.top-area .wrapper{
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-.menu li a{
-  color: #3F5D45; padding: 8px 20px;
+.top-photo{
+  width: 49%;
 }
-.menu li a:hover{
-  opacity: 0.8;
+.top-photo img{
+  max-width: 100%;
+  height: auto;
 }
-.icon-cart{
-  display: block;
-  width: 24px;
-  height: 24px;
-  background: url(https://hexschool.github.io/webLayoutTraining1st/student-week1/shopping_cart.png) no-repeat center;
+.top-area-content h2{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.44;
+  color: #56C4C5;
+}
+.top-area-content h3{
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.46;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+.top-area-content p{
+  line-height: 1.45;
+  font-size: 18px;
 }
 
-.cart{margin-left: 50px;}
-.banner{margin-bottom: 60px;}
-.main{
-  display: flex; padding-bottom: 60px;
+.sns-area{
+
 }
-.sidenav{
-  font-size: 24px;
+.sns-area ul{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 76px;
+}
+.title{
+  font-size: 32px;
+  margin-bottom: 48px;
   text-align: center;
-  width: 300px;
-  margin-right: 20px;
-  flex-shrink: 0;
+  font-weight: 700;
+  line-height: 1.43;
 }
-.sidenav h3{
-  padding: 16px 5px;
-  background: #3F5D45;
-  color: #fff;
+.role .title{
+  margin-bottom: 16px;
+}
+.sns-area li{
+  width: 33%;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.sns-area li img{
+  margin-bottom: 24px;
+  width: 90px;
 }
 
-.sidenav ul li a{
+.sns-area li h3{
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.46;
+}
+
+.sns-area li p{
+  line-height: 1.5;
+}
+
+
+.sns-area:before{
+  content: "";
+  width: 360px;
+  height: 360px;
   display: block;
-  border: 1px solid #EAF0ED;
-  border-bottom: none;
-  color: #3F5D45;
-  padding: 16px 5px;
-
+  position: absolute;
+  z-index: -1;
+  left:-180px;
+  background: #56C4C5;
+  border-radius: 50%;;
+  margin-top: -280px;
 }
-.sidenav ul li:last-child a{
-  border-bottom: 1px solid #EAF0ED;
+.role{
+  position: relative;
 }
-.sidenav ul li a:hover, .sidenav ul li a.current{
-  background: #EAF0ED;
-  border-color: #EAF0ED;
-}
-
-
-
-.item-list{
+.role ul{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-.item-list li{
-  width: 300px;
-  position: relative;
-  margin-bottom: 20px;
+  margin: 0 -0.5%;
+  margin-top: 48px;
+  margin-bottom: 100px;
 }
 
-.item-photo img{
-  width: 100%;
-  height: 315px;
-  vertical-align: top;
-}
-.tag{
-  position: absolute;
-  left: 20px;
-  width: 36px;
-  height: 107px;
-  padding: 10px;;
-  color: #fff;
-  background: #3F5D45;
-  text-align:center;
-  line-height: 1.2;
-}
-
-.btn-collect{
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  right: 22px;
-  top: 19px;
-  border:none;
-  background: url(https://hexschool.github.io/webLayoutTraining1st/student-week1/favorite_border.png) no-repeat center;
-}
-.btn-collect:hover{
-  opacity: 0.5;
-}
-.item-info{
-  display: flex;
-  color: #3F5D45;
-  font-size: 20px;
-  align-items: center;  
-  border: 1px solid #EAF0ED;
-}
-.item-title{
-  width: 173px;
-  text-align:center;
-  padding: 14px 5px;
-}
-
-.price{
-  width: 127px;
-  text-align:center;
-  padding: 14px 5px;
-  border-left: 1px solid #EAF0ED;
-}
-.btn-addcart{
-  border: 1px solid #EAF0ED;
-  background: #EAF0ED;
-  color: #3F5D45;
-  height: 65px;
+.role ul li{
+  width: 23.8%;
   text-align: center;
-  line-height: 65px;
-  display: block;
-  font-size: 24px;
+  box-shadow: 0px 2px 10px #00000014;
+  border-radius: 12px;
+  margin: 0 0.5%;
+  overflow: hidden;
+  font-weight: 700;
 }
-.page ul{
-  margin-top: 30px;  
+.role ul li h3{
+  color: #56C4C5;
+  margin: 16px 0;
+
+}
+.role ul li p{
+  line-height: 1.5;
+  padding: 0 16px 24px;
+}
+.role ul li img{
+  max-width: 100%;
+  height: auto;
+}
+
+.sub-title{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* .role:after{
+  content: "";
+  background: #B8E6E7;
+  width: 310px;
+  height: 310px;
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  display: block;
+  right:-200px;
+} */
+.function .wrapper{
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.page ul li a{
-  color: #3F5D45;
-  width: 60px;
-  height: 60px;
-  display: block;
-  border: 1px solid #EAF0ED;
-  border-right: none;
-  line-height: 60px;
+
+
+.function ul{
+  display: flex;
+  width: 47%;
+  flex-wrap: wrap;
+  margin-bottom: 72px;
+}
+.function ul li{
+  width: 45%;
+  box-shadow: 0px 2px 10px #00000014;
+  border-radius: 12px;
+  background: #fff;
+  padding: 32px 32px 48px;
+  margin-right: 10%;
+  margin-bottom: 28px;
+}
+.function ul li:nth-child(2n){
+  margin-right: 0;
+}
+
+
+.function ul li h3{
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+.function ul li p{
+  list-style: 1.5;
+}
+
+.icon-circle{
+  width: 86px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  box-shadow: 0px 2px 10px #00000014;
+}
+
+
+.function-word{
+  width: 43%;
+  margin-left: 10%;
+}
+
+.function-word .title{
+  margin-bottom: 16px;
+  text-align: left;
+}
+.function-word P{
+  margin-bottom: 24px;
+  line-height: 1.44;
+}
+.comment{
+  margin-bottom: 100px;
+}
+.comment .title{margin-bottom: 104px;}
+.comment-card-list{
+  display: flex;
+  justify-content: space-between;
+  
+}
+.comment-card{
+  box-shadow: 0px 2px 10px #00000014;
+  border-radius: 12px;
+  background: #fff;
+  width: 32%;
+  padding: 48px 32px 24px;
+  position: relative;
+  
+}
+.comment-card-list p{
+  line-height: 1.44;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.star li{
+  display: inline-block;
+  width: 17px; height: 16px;
+  margin-right: 5px;  
+  background: url(../images/icon_star.svg) no-repeat;
+  background-size: 17px;
+}
+.avatar{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -100px;
+  position: absolute;
+  box-shadow: 0px 2px 10px #00000014;
+}
+.avatar img{
+  max-width: 100%;
+  height: auto;
+}
+.comment-card-bottom{
+  display: flex;
+  justify-content: space-between;
+}
+.comment-card h4{
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.dot{
   text-align: center;
-}
-.page ul li a img{vertical-align: top;}
-.page ul li a:last-child{
-  border-right: 1px solid #EAF0ED;
-}
-.page ul li a:hover{
-  background-color: #EAF0ED;
-}
-.page ul li a.current, .page ul li a.current:hover{
-  background: #3F5D45; 
-  color: #fff;
-  border-color: #3F5D45;
+  margin-top: 24px;
 }
 
-.btn-prev{
-  background: url(https://hexschool.github.io/webLayoutTraining1st/student-week1/arrow_left.png) center no-repeat;
+.dot li{
+  width: 10px;
+  height: 10px;
+  background: #ddd;
+  margin: 0 3px;
+  display: inline-block;
+  border-radius: 50px;
+}
+.dot li.active{
+  width: 16px;
+  background: #FFD153;
 }
 
-.btn-next{
-  background: url(https://hexschool.github.io/webLayoutTraining1st/student-week1/arrow_right.png) center no-repeat;
+.call{
+  background: url(../images/home_footer.svg) no-repeat center top;
+  background-size: cover;
+  text-align: center;
+  padding: 260px 10px 100px;
 }
+
+footer{
+  background: #F5F5F5;
+  text-align: center;
+  padding: 16px 0;
+}
+
+
+@media (max-width: 1200px){
+  .wrapper{
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px){
+  .top-area{
+    height: auto;
+  }
+  .sns-area:before {
+    width: 126px;
+    height: 126px;    
+    left: -63px;
+    margin-top: 0;
+  }
+}
+
+
+@media (max-width: 768px){
+  .header{
+    border-bottom: 2px solid #FFD153;
+  }
+  .top-area-content, .top-photo{
+    width: 100%;
+  }
+  .top-area .wrapper{
+    flex-wrap: wrap;
+  }
+  .top-area{
+    background: url(../images/bg_home_sm.svg) no-repeat center bottom;
+    background-size: 93%;
+  }
+  .top-area-content h3{font-size: 32px;}
+  .top-area-content p{font-size: 16px;}
+  .sns-area{margin-top: 60px;}
+  .sns-area li img{
+    width: 60px; margin-bottom: 16px;
+  }
+  .sns-area li h3{margin-bottom: 16px; font-size: 18px;
+  line-height: 1.44;}
+  .logo{
+    width: 130px;
+  }
+  .header {
+    padding: 10px 0;
+  }
+  .top-area{
+    padding-top: 104px;
+  }
+  .top-area-content h2{font-size: 16px;}
+  
+  .title{font-size: 28px;}
+  .sns-area li{width: 100%;}
+  .sns-area ul{
+    flex-wrap: wrap; margin-bottom: 60px;
+  }
+  .sub-title{font-size: 18px;}
+  .role ul {
+    margin: 0;
+    margin-top: 32px;
+    margin-bottom: 28px;
+  }
+  .role ul li{
+    width: 100%;
+    margin: 0 0 24px;
+  }
+  .function ul{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .function ul li{
+    width: 100%;
+    margin-right: 0;
+    max-width: 284px;
+  }
+  .function .wrapper{
+    flex-direction: column-reverse;
+  }
+  .function-word {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    padding-bottom: 32px;
+  }
+  .function-word .title{
+    text-align: center;
+  }
+  .comment-card{
+    width: 100%;
+  }
+  .comment-card:nth-child(2), .comment-card:nth-child(3){
+    display: none; /*----沒套JQ 所以示意用-----*/
+  }
+  .comment {
+    margin-bottom: 60px;
+  }
+  .call {
+    background: url(../images/footer_sm.svg) no-repeat center top;
+    background-size: 100%;
+    padding: 260px 10px 100px;
+  }
+
+
+
+}
+
+@media (max-width: 600px){
+  
+  
+}
+
