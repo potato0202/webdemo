@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>臺北市政府-節能填報系統</title>
+    <!--Bootstrap v5.1.3-->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--layout客製-->
+    <link href="css/layout.css" rel="stylesheet">
+    <!--Bootstrap v5.1.3-->
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <!--jquery-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!--客製JS-->    
+    <script type="text/javascript" src="js/common.js"></script>
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <noscript class="noscript">您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態</noscript>
+    <a href="#content" id="gotocenter" title="移至主要內容" class="sr-only sr-only-focusable">跳到主要內容</a>
+    <header class="header">
+        <div class="d-flex align-items-center me-auto">
+            <h1>
+                <a class="logo" href="index.html">
+                    <img class="m-logo" src="images/mob-logo.png" alt=""><img class="logo-taipei" src="images/logo.png" alt="台北市政府"><img class="logo-system" src="images/title.png" alt="節能填報系統">
+                </a>
+            </h1>            
+            <a href="sitemap.html" class="webmap mob-hidden">網站架構</a>
+        </div>
+
+        <ul class="nav">
+            <a href="#U" title="右上方功能區塊" id="AU" accesskey="U" name="U" style="color:#fff; position: absolute;z-index: 1;" class="accesskey">:::</a>
+            <li class="nav-item item-eui">
+                <div class="item-eui-area">
+                    <h4>111年EUI</h4>
+                    <p>49</p>
+                </div>
+                <span class="iea-line"></span>
+                <div class="item-eui-area">
+                    <h4>111年EUI</h4>
+                    <p>47</p>
+                </div>
+            </li>
+            <li class="nav-item login-time mob-hidden">
+                <h4>登入時間</h4>
+                <div class="time-info">110/12/23 14:22:33 王小華</div>
+            </li>
+
+            <li class="btn-logout mob-hidden">
+                <a href="javascript:void(0)"><span>登出</span></a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="m-hamburger"><i></i><i></i><i></i></a>
+            </li>  
+        </ul>
+    </header>
+
+    <!----手機版 點擊漢堡選單出現的物件(選單+登入時間+網站架構連結+登出)----->
+    <div class="m-nav" id="m-nav">
+        <section class="d-flex m-nav-head">
+            <div class="m-login-time">
+                <h4>登入時間</h4>
+                <div class="time-info">110/12/23 14:22:33 王小華</div>
+            </div>
+            <div><a href="sitemap.html" class="webmap">網站架構</a></div>
+        </section>
+        
+        <ul class="sidebar-tree-nav">
+            <li><a class="dashboard" href="index.html">Dashboard</a></li>
+            <!--用電填報管理-->
+            <li><span class="power">用電填報管理</span>
+                <ul>
+                    <li><span class="caret nav-search">查詢作業</span>
+                        <ul class="nested">
+                            <li><a href="power-search.html">每月用電量查詢</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="caret nav-add">新增作業</span>
+                        <ul class="nested">
+                            <li><a href="power-add.html">每月用電量填報</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="caret nav-apply">申請作業</span>
+                        <ul class="nested">
+                            <li><a href="power-apply-floor-area.html">樓地板面積/基期年設定</a></li>
+                            <li><a href="power-apply-office-set.html">合署辦公機關設定</a></li>
+                            <li><a href="power-apply-change.html">用電資料變更申請</a></li>
+                            <li><a href="power-apply-record.html">用電資料變更申請紀錄</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="caret nav-report">報表作業</span>
+                        <ul class="nested">
+                            <li><a href="power-report-expedite.html">每月填報稽催清單</a></li>
+                            <li><a href="power-report-electricity-statistic.html">用電量統計報表</a></li>
+                            <li><a href="power-report-electricity-statistic-year.html">用電量統計年報表</a></li>
+                            <li><a href="power-report-electricity-category-statistic.html">用電量分類統計報表</a></li>
+                            <li><a href="power-report-transaction.html">用電填報資料異動報表</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!--//用電填報管理END-->
+
+            <!--用油填報管理-->
+            <li><span class="oil">用油填報管理</span>
+                <ul>
+                    <li><span class="caret nav-search">查詢作業</span>
+                        <ul class="nested">
+                            <li><a href="oil-research.html">每月用油量查詢</a></li>
+                            <li><a href="oil-research-bifuel.html">雙燃料用油查詢</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="caret nav-add">新增作業</span>
+                        <ul class="nested">
+                            <li><a href="oil-add.html">每月用油量填報</a></li>
+                            <li><a href="oil-add-bifuel.html">雙燃料車用油填報</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="caret nav-apply">申請作業</span>
+                        <ul class="nested">
+                            <li><a href="oil-apply-change.html">用油資料變更申請</a></li>
+                            <li><a href="oil-apply-record.html">用油資料變更申請紀錄</a></li>
+                            <li><a href="oil-apply-change-bifuel.html">雙燃料車用油變更申請</a></li>
+                            <li><a href="oil-apply-record-bifuel.html">雙燃料車用油變更申請紀錄</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="caret nav-report">報表作業</span>
+                        <ul class="nested">
+                            <li><a href="oil-report-expedite.html">每月填報稽催清單</a></li>
+                            <li><a href="oil-report-oil-statistic.html">用油量統計報表</a></li>
+                            <li><a href="oil-report-oil-statistic-year.html">用油量統計年報表</a></li>
+                            <li><a href="oil-report-oil-category-statistic.html">用油量分類統計報表</a></li>
+                            <li><a href="oil-report-bifuel-statistic.html">雙燃料統計報表</a></li>
+                            <li><a href="oil-report-bifuel-statistic-year.html">雙燃料統計年報表</a></li>
+                            <li><a href="oil-report-bifuel-category-statistic.html">雙燃料分類統計報表</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!--//用油填報管理END-->
+        </ul>
+        <div class="m-btn-logout">
+            <a href="javascript:void(0)">登出</a>
+        </div>        
+    </div>
+    
+    <!----//手機版 點擊漢堡選單出現的物件(選單+登入時間+網站架構連結+登出)END----->
+
+
+
+
+    <!--sidebar start  電腦版側邊欄 當頁li選單會要加上class:current表示當前頁，當頁(第三層頁面)li的上層ul會是<ul class="nested active">-->
+    <aside class="sidebar">
+        <ul class="sidebar-tree-nav">
+            <li><a class="dashboard" href="index.html">Dashboard</a></li>
+            <!--用電填報管理-->
+            <li><span class="power">用電填報管理</span>
+                <ul>
+                    <li><span class="caret nav-search">查詢作業</span>
+                        <ul class="nested">
+                            <li><a href="power-search.html">每月用電量查詢</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="caret nav-add">新增作業</span>
+                        <ul class="nested">
+                            <li><a href="power-add.html">每月用電量填報</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="caret nav-apply">申請作業</span>
+                        <ul class="nested">
+                            <li><a href="power-apply-floor-area.html">樓地板面積/基期年設定</a></li>
+                            <li><a href="power-apply-office-set.html">合署辦公機關設定</a></li>
+                            <li><a href="power-apply-change.html">用電資料變更申請</a></li>
+                            <li><a href="power-apply-record.html">用電資料變更申請紀錄</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="caret nav-report">報表作業</span>
+                        <ul class="nested">
+                            <li><a href="power-report-expedite.html">每月填報稽催清單</a></li>
+                            <li><a href="power-report-electricity-statistic.html">用電量統計報表</a></li>
+                            <li><a href="power-report-electricity-statistic-year.html">用電量統計年報表</a></li>
+                            <li><a href="power-report-electricity-category-statistic.html">用電量分類統計報表</a></li>
+                            <li><a href="power-report-transaction.html">用電填報資料異動報表</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!--//用電填報管理END-->
+
+            <!--用油填報管理-->
+            <li><span class="oil">用油填報管理</span>
+                <ul>
+                    <li><span class="caret nav-search">查詢作業</span>
+                        <ul class="nested">
+                            <li><a href="oil-research.html">每月用油量查詢</a></li>
+                            <li><a href="oil-research-bifuel.html">雙燃料用油查詢</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="caret nav-add">新增作業</span>
+                        <ul class="nested">
+                            <li><a href="oil-add.html">每月用油量填報</a></li>
+                            <li><a href="oil-add-bifuel.html">雙燃料車用油填報</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="caret nav-apply">申請作業</span>
+                        <ul class="nested active">
+                            <li><a href="oil-apply-change.html">用油資料變更申請</a></li>
+                            <li><a href="oil-apply-record.html">用油資料變更申請紀錄</a></li>
+                            <li><a href="oil-apply-change-bifuel.html">雙燃料車用油變更申請</a></li>
+                            <li><a href="oil-apply-record-bifuel.html" class="current">雙燃料車用油變更申請紀錄</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="caret nav-report">報表作業</span>
+                        <ul class="nested">
+                            <li><a href="oil-report-expedite.html">每月填報稽催清單</a></li>
+                            <li><a href="oil-report-oil-statistic.html">用油量統計報表</a></li>
+                            <li><a href="oil-report-oil-statistic-year.html">用油量統計年報表</a></li>
+                            <li><a href="oil-report-oil-category-statistic.html">用油量分類統計報表</a></li>
+                            <li><a href="oil-report-bifuel-statistic.html">雙燃料統計報表</a></li>
+                            <li><a href="oil-report-bifuel-statistic-year.html">雙燃料統計年報表</a></li>
+                            <li><a href="oil-report-bifuel-category-statistic.html">雙燃料分類統計報表</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!--//用油填報管理END-->
+        </ul>
+
+    </aside>
+    <!--//sidebar end-->
+
+    <!--main content start-->
+    <section id="main-content" class="main-content">
+
+        <!---****main-content-wrapper包住內容，不包footer。才能讓footer置底****----->
+        <div class="main-content-wrapper">            
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C" style="position: absolute; z-index: 1;" class="accesskey">:::</a>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">用油填報管理</li>
+                  <li class="breadcrumb-item">申請作業</li>
+                  <li class="breadcrumb-item active" aria-current="page">雙燃料車用油資料變更申請紀錄</li>
+                </ol>
+            </nav>
+            <h2 class="unit-title">雙燃料車用油資料變更申請紀錄</h2>
+            <div class="content">
+                <section class="filter-area">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="apply_year_month" class="col-form-title">申請年月</label>
+                            <div class="col-form-items">
+                                <select class="form-select width-1" aria-label="選擇年份" id="apply_year_month">
+                                    <option value="1">110</option>
+                                    <option value="2">109</option>
+                                    <option value="3">108</option>
+                                </select>
+                                <select class="form-select width-1" aria-label="選擇月份">
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                    <option value="5">05</option>
+                                    <option value="6">06</option>
+                                    <option value="7">07</option>
+                                    <option value="8">08</option>
+                                    <option value="9">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                        </div><!--//form-group END-->    
+                        <div class="form-group mb-0">
+                            <label for="apply_all" class="col-form-title">雙燃料車用油變更申請事宜</label>
+                            <div class="col-form-items">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="apply_all" value="1" checked="">
+                                    <label class="form-check-label" for="apply_all">全部</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="apply_add" value="1">
+                                    <label class="form-check-label" for="apply_add">新增</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="apply_modify" value="2">
+                                    <label class="form-check-label" for="apply_modify">修改</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="apply_delete" value="2">
+                                    <label class="form-check-label" for="apply_delete">刪除</label>
+                                </div>
+                            </div>
+                            <div class="form-btn-area">
+                                <button type="submit" class="btn btn-primary">查詢</button>
+                            </div>                             
+                        </div><!--//form-group END-->  
+                    </form>
+                </section>
+                
+                <div class="info-area">
+                    <table class="default-table multilayer-header fz-sm">
+                        <tbody>
+                            <tr class="primary">
+                                <th rowspan="2" id="a1">申請</th>
+                                <th rowspan="2" id="a2">申請日</th>
+                                <th rowspan="2" id="a3">車號</th>
+                                <th rowspan="2" id="a4">用油類別</th>
+                                <th colspan="2" id="a5">汽油用油量</th>
+                                <th colspan="2" id="a6">汽油用油金額</th>
+                                <th colspan="2" id="a7">液化石油氣用油量</th>
+                                <th colspan="2" id="a8">液化石油氣用油金額</th>
+                                <th rowspan="2" id="a9">原因說明</th>
+                                <th rowspan="2" id="a10">佐證資料</th>
+                                <th rowspan="2" id="a11">審核狀態</th>
+                            </tr>
+                            <tr class="primary">
+                                <th id="b1">修正前</th>
+                                <th id="b2">修正後</th>
+                                <th id="b3">修正前</th>
+                                <th id="b4">修正後</th>
+                                <th id="b5">修正前</th>
+                                <th id="b6">修正後</th>
+                                <th id="b7">修正前</th>
+                                <th id="b8">修正後</th>
+                            </tr>  
+                            <!--資料開始-->    
+                            <tr>
+                                <td headers="a1" class="text-center">新增</td>
+                                <td headers="a2" class="text-center">111/10/02</td>
+                                <td headers="a3" class="text-center">5300-XG</td>
+                                <td headers="a4">一般行政用汽（機）車</td>
+                                <td headers="a5 b1">程式帶</td>
+                                <td headers="a5 b2">程式帶</td>
+                                <td headers="a6 b3">程式帶</td>
+                                <td headers="a6 b4">程式帶</td>
+                                <td headers="a7 b5">程式帶</td>
+                                <td headers="a7 b6">程式帶</td>
+                                <td headers="a8 b7">程式帶</td>
+                                <td headers="a8 b8">程式帶</td>         
+                                <td headers="a9">原因說明程式帶</td>
+                                <td headers="a10" class="text-center">
+                                <button type="button" class="btn btn-primary btn-sm">
+                                    檔案
+                                </button>
+                                </td>
+                                <td headers="a11">通過</td>
+                            </tr>
+                            <tr>
+                                <td headers="a1" class="text-center">修改</td>
+                                <td headers="a2" class="text-center">111/10/02</td>
+                                <td headers="a3" class="text-center">5300-XG</td>
+                                <td headers="a4">一般行政用汽（機）車</td>
+                                <td headers="a5 b1">程式帶</td>
+                                <td headers="a5 b2">程式帶</td>
+                                <td headers="a6 b3">程式帶</td>
+                                <td headers="a6 b4">程式帶</td>
+                                <td headers="a7 b5">程式帶</td>
+                                <td headers="a7 b6">程式帶</td>
+                                <td headers="a8 b7">程式帶</td>
+                                <td headers="a8 b8">程式帶</td>         
+                                <td headers="a9">原因說明程式帶</td>
+                                <td headers="a10" class="text-center">
+                                <button type="button" class="btn btn-primary btn-sm">
+                                    檔案
+                                </button>
+                                </td>
+                                <td headers="a11">不通過，原因XXX原因</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                                   
+                </div><!--//info-area END-->
+                
+               
+            </div><!--//content END-->
+
+            
+        </div>
+        <!--****//-main-content-wrapper包住內容，不包footer。才能讓footer置底 end****----->
+        <footer class="footer">
+            <a href="#Z" title="下方功能區塊" id="AZ" accesskey="Z" name="Z" style="" class="accesskey">:::</a>
+            Ⓒ2022台北市政府 All Rights Reserved.
+        </footer>
+    </section>
+    <!--//main content end-->
+
+    <!--回頂部-->
+    <div id="gotop" class="gotop"><span>TOP</span></div>
+
+</body>
+
+</html>
